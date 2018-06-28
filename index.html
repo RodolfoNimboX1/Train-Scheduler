@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler! Choo Choo mofo</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!--CSS style-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <!--Header Section-->
+    <!-- Jumbotron -->
+    <div class="jumbotron" style="background-color: black !important;">
+        <h1 class="text-center" style="color: white !important;">Anytime is Train time</h1>
+        <h3 class="text-center" style="color: white !important;">Choo Choo mofo! Hop in</h3>
+    </div>
+    
+    <!--Current Employees-->
+    <div class="row" id="employees-table">
+        <h3>Current Train Schedule</h3>
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                      <th>Train Name</th>
+                      <th>Destination</th>
+                      <th>Frequency (min)</th>
+                      <th>Next Arrival</th>
+                      <th>Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody id="new-row">
+
+                    <tr>
+                      <td>Trenton Express</td>
+                      <td>Trenton</td>
+                      <td>25</td>
+                      <td>05:35 PM</td>
+                      <td>10</td>
+                    </tr>
+
+                    <!--New Train information-->
+
+                  </tbody>
+                  </table>
+
+    </div>
+
+    <!--Add Train-->
+    <div class="row" id="new-employee">
+
+            <!-- Sign-Up Card-->
+    <div class="col-lg-6">
+
+              <div class="card card-default">
+                <div class="card-heading">
+                  <h3 class="card-title">Add new Train</h3>
+                </div>
+
+                <div class="card-body">
+      
+                  <!-- Sign-up Form-->
+      
+                  <form role="form">
+
+                    <div class="form-group row">
+                      <label for="name-input">Train Name:</label>
+                      <input class="form-control" id="name-input" type="text">
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label for="role-input">Destination:</label>
+                      <input class="form-control" id="destination-input" type="text">
+                    </div>
+
+                    <div class="form-group row">
+                      <label for="date-input">First Train Time (HH:mm):</label>
+                      <input class="form-control" id="time-input" type="input">
+                    </div>
+
+                    <div class="form-group row">
+                            <label for="rate-input">Frequency (min):</label>
+                            <input class="form-control" id="freq-input" type="input">
+                    </div>
+
+                    <button class="btn btn-default" id="add-train" type="submit">Submit</button>
+
+                  </form>
+      
+                </div>
+      
+            </div>
+      
+    </div>
+
+</div>
+
+<!-- Link to Moment.js -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<!--Bootstrap JS-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script type="text/javascript" src="assets/app.js"></script>
+</body>
+</html>
